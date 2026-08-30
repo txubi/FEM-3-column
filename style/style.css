@@ -9,6 +9,7 @@
   --cyan500: #26b5c0;
   --gold500: #e28625;
   --gold200: #ffd473;
+  --heightOfCard: 442px;
 }
 * {
   box-sizing: border-box;
@@ -32,6 +33,36 @@
   letter-spacing: 0px;
   opacity: 0.75;
 }
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main {
+  background-color: white;
+  width: 83.7%;
+  padding: calc(calc(1502px - 442px * 3) / 2) 0;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  height: var(--heightOfCard);
+  background-color: tomato;
+}
+img {
+  width: 63.99px;
+  height: 40px;
+}
 a {
   opacity: 1;
+}
+@media screen and (min-width: 768px) {
+  .card {
+    background-color: pink;
+  }
+  body {
+    display: flex;
+    justify-content: center;
+  }
 }
