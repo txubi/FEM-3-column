@@ -38,17 +38,43 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: var(--gray);
+  color: var(--gray);
 }
 main {
-  background-color: white;
+  background-color: var(--gray);
   width: 83.7%;
+  height: 100%;
   padding: calc(calc(1502px - 442px * 3) / 2) 0;
 }
 .card {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   height: var(--heightOfCard);
-  background-color: tomato;
+}
+.card-suvs {
+  background-color: var(--cyan800);
+}
+.card-sedans {
+  background-color: var(--gold500);
+}
+.card-luxury {
+  background-color: var(--green950);
+}
+.card-content {
+  width: 70.642%;
+  height: 77.149%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card-text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 img {
   width: 63.99px;
