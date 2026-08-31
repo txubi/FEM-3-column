@@ -26,7 +26,7 @@
 .lexend-deca-regular {
   font-family: "Lexend Deca", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 165;
+  font-weight: 400;
   font-style: normal;
   font-size: 15px;
   line-height: 165%;
@@ -43,11 +43,16 @@ body {
 }
 main {
   background-color: var(--gray);
-  width: 83.7%;
-  height: 100%;
+  /* width: 83.7%;
+  height: 100%; */
   padding: calc(calc(1502px - 442px * 3) / 2) 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .card {
+  width: 327px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -59,9 +64,11 @@ main {
 }
 .card-sedans {
   background-color: var(--gold500);
+  border-radius: 8px 8px 0 0;
 }
 .card-luxury {
   background-color: var(--green950);
+  border-radius: 0 0 8px 8px;
 }
 .card-content {
   width: 70.642%;
@@ -80,15 +87,83 @@ img {
   width: 63.99px;
   height: 40px;
 }
+p {
+  opacity: 75%;
+}
 a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 147px;
+  height: 48px;
   opacity: 1;
+  background-color: var(--gray);
+  border-radius: 25px;
+  text-decoration: none;
+  font-family: "Lexend Deca", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15px;
+  line-height: 165%;
+  letter-spacing: 0px;
+}
+.card-suvs a {
+  color: var(--cyan800);
+}
+.card-sedans a {
+  color: var(--gold500);
+}
+.card-luxury a {
+  color: var(--green950);
+}
+a:hover,
+a:active {
+  border: var(--gray) 1px solid;
+  color: var(--gray);
+  background-color: tomato;
+}
+.card-suvs a:active,
+.card-suvs a:hover {
+  background-color: var(--cyan800);
+}
+.card-sedans a:active,
+.card-sedans a:hover {
+  background-color: var(--gold500);
+}
+.card-luxury a:active,
+.card-luxury a:hover {
+  background-color: var(--green950);
 }
 @media screen and (min-width: 768px) {
-  .card {
-    background-color: pink;
-  }
   body {
     display: flex;
     justify-content: center;
+  }
+  .card {
+    height: 391px;
+    width: 608px;
+  }
+  .card-content {
+    justify-content: space-around;
+  }
+  .card-text {
+    height: 100%;
+  }
+}
+@media screen and (min-width: 1147px) {
+  main {
+    height: 100vh;
+    flex-direction: row;
+  }
+  .card {
+    height: 500px;
+    width: 307px;
+  }
+  .card-sedans {
+    border-radius: 8px 0 0 8px;
+  }
+  .card-luxury {
+    border-radius: 0 8px 8px 0;
   }
 }
